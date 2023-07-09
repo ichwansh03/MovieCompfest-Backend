@@ -34,7 +34,7 @@
 		} else {
 			// Item belum ada, tambahkan item baru ke dalam database
 			$insertQuery = "INSERT INTO withdraw (username, balance) 
-			VALUES ('".$name."', '".$balance."')";
+			VALUES ('".$username."', '".$balance."')";
 			$insertResult = mysqli_query($conn, $insertQuery);
 
 			if ($insertResult) {
