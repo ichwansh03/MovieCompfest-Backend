@@ -4,12 +4,13 @@
 
     $name = $_POST['name'];
 	$title = $_POST['title'];
-	$seat = $_POST['seat'];
+	$total = $_POST['total'];
+    $seat = $_POST['seat'];
 
-    if (isset($name) && isset($title) && isset($seat)) {
+    if (isset($name) && isset($quantity) && isset($title) && isset($price) && isset($total) && isset($seat)) {
         
-        $query = "INSERT INTO seats (name, title, seat)
-        VALUES ('".$name."', '".$title."', '".$seat."')";
+        $query = "INSERT INTO ticket (name, quantity, title, price, total, seat)
+        VALUES ('".$name."', '".$quantity."', '".$title."', '".$price."', '".$total."', '".$seat."')";
         
         $result = mysqli_query($conn, $query);
 
